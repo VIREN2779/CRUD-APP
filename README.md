@@ -23,4 +23,4 @@ This CRUD app is a built using HTML, CSS, and JavaScript. It allows users to per
 1. Clone this repository to your pc/laptop using `git clone`.
 
 ```bash
-git clonehttps://github.com/VIREN2779/CRUD-APP
+git clone https://github.com/VIREN2779/CRUD-APP
