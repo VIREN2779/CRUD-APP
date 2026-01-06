@@ -47,3 +47,8 @@ let createText = () => {
 let deleteText = (e) => {
    e.parentElement.parentElement.remove();
 }
+
+let editText = (e) => {
+    input.value = e.parentElement.previousElementSibling.innerHTML;
+    e.parentElement.parentElement.remove();
+}
