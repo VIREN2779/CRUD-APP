@@ -7,5 +7,15 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("submit", (e) => {
         e.preventDefault();
         console.log("button clicked");
+
+         formValidation();
     });
 });
+
+let formValidation = () => {
+    if(input.value === ""){
+        msg.innerHTML = "Text cannot be blank.";
+    } else {
+        msg.innerHTML = "";
+    }
+}
