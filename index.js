@@ -42,3 +42,8 @@ let createText = () => {
 
     input.value = "";
 }
+
+
+let deleteText = (e) => {
+   e.parentElement.parentElement.remove();
+}
