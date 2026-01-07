@@ -1,32 +1,149 @@
+/* Google Font (optional but recommended) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: sans-serif;
-    margin: 0 50px;
-}
-
-.container {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
     display: flex;
-    gap: 50px;
+    align-items: center;
+    justify-content: center;
 }
 
-#posts {
-    width: 400px;
+/* Main container */
+.container {
+    background: #ffffff;
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 16px;
+    padding: 30px;
+    display: flex;
+    gap: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
-i {
+/* Left & Right sections */
+.left,
+.right {
+    flex: 1;
+}
+
+/* Headings */
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Label */
+label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+}
+
+/* Textarea */
+textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    resize: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+/* Button */
+button {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
     cursor: pointer;
+    transition: 0.3s;
 }
 
+button:hover {
+    background: #5a67d8;
+    transform: translateY(-1px);
+}
+
+/* Error message */
+#msg {
+    color: #e53e3e;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+/* Posts section */
+#posts {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow-y: auto;
+    max-height: 336px;
+}
+
+/* Individual post card */
 #posts div {
+    background: lightgray;
+    padding: 14px 16px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: 0.3s;
 }
 
+#posts div:hover {
+    transform: translateY(-2px);
+    background: #f1f3ff;
+}
+
+/* Post text */
+#posts p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+/* Icons */
 .options {
     display: flex;
-    gap: 25px;
+    gap: 18px;
 }
 
-#msg {
-    color: red;
+.options i {
+    font-size: 16px;
+    cursor: pointer;
+    color: #555;
+    transition: 0.3s;
+}
+
+.options i:hover {
+    color: #667eea;
+    transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
 }
