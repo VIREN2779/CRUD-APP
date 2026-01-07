@@ -4,12 +4,17 @@ This is the crud app build using HTML, CSS, JavaScript.
 ## Table of Contents
 
 - [Overview](#overview)
+- [Demo](#demo)
 - [Features](#features)
 - [Installation](#installation)
 
 ## Overview
 
 This CRUD app is a built using HTML, CSS, and JavaScript. It allows users to perform basic CRUD operations, creating new records, reading existing records, updating records, and deleting records.
+
+## Demo
+
+A live demo of the app is available at [Link](https://dev-viren-crud-text-app.netlify.app/).
 
 ## Features
 
