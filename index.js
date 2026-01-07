@@ -3,13 +3,22 @@ document.addEventListener("DOMContentLoaded", () => {
     let input = document.getElementById("input");
     let msg = document.getElementById("msg");
     let posts = document.getElementById("posts");
+    let submitBtn = document.getElementById("submitButton");
 
     form.addEventListener("submit", (e) => {
         e.preventDefault();
         console.log("button clicked");
 
-         formValidation();
+        formValidation();
     });
+
+    input.addEventListener("keydown", function (e) {
+        if (e.key === "Enter") {
+            e.preventDefault();
+            submitBtn.click();
+            msg.innerHTML = "";
+        }
+    })
 });
 
 let formValidation = () => {
@@ -45,7 +54,7 @@ let createText = () => {
 
 
 let deleteText = (e) => {
-   e.parentElement.parentElement.remove();
+    e.parentElement.parentElement.remove();
 }
 
 let editText = (e) => {
